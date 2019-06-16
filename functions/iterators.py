@@ -1,3 +1,7 @@
+import requests
+from time import sleep
+
+
 def get_range(length):
     for i in range(length):
         yield i
@@ -14,6 +18,7 @@ def main():
     for i in ge:
         print(f'got {i} from iterator')
 
+    r = requests.get('http://localhost:4000/request')
     print('fin')
 
 
